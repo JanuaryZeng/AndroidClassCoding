@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minLines="2"
+        />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow
+            style="@style/tbr1"
+            >
+
+            <Button
+                style="@style/btn1"
+                android:text="MC" />
+
+            <Button
+                style="@style/btn1"
+                android:text="MR" />
+
+            <Button
+                style="@style/btn1"
+                android:text="MS" />
+
+            <Button
+                style="@style/btn1"
+                android:text="M+" />
+
+            <Button
+                style="@style/btn1"
+                android:text="M-" />
+
+        </TableRow>
+
+        <TableRow
+            style="@style/tbr1"
+            >
+
+            <Button
+                style="@style/btn1"
+                android:text="👈" />
+
+            <Button
+                style="@style/btn1"
+                android:text="CE" />
+
+            <Button
+                style="@style/btn1"
+                android:text="C" />
+
+            <Button
+                style="@style/btn1"
+                android:text="±" />
+
+            <Button
+                style="@style/btn1"
+                android:text="√" />
+
+        </TableRow>
+
+        <TableRow
+            style="@style/tbr1"
+            >
+
+            <Button
+                style="@style/btn1"
+                android:text="7" />
+
+            <Button
+                style="@style/btn1"
+                android:text="8" />
+
+            <Button
+                style="@style/btn1"
+                android:text="9" />
+
+            <Button
+                style="@style/btn1"
+                android:text="/" />
+
+            <Button
+                style="@style/btn1"
+                android:text="%" />
+
+        </TableRow>
+
+        <TableRow
+            style="@style/tbr1"
+            >
+
+            <Button
+                style="@style/btn1"
+                android:text="4" />
+
+            <Button
+                style="@style/btn1"
+                android:text="5" />
+
+            <Button
+                style="@style/btn1"
+                android:text="6" />
+
+            <Button
+                style="@style/btn1"
+                android:text="*" />
+
+            <Button
+                style="@style/btn1"
+                android:text="1/x" />
+
+        </TableRow>
+
+    </TableLayout>
+    <RelativeLayout
+        style="@style/tbr1">
+        <Button
+            android:id="@+id/btn1"
+            style="@style/btn1"
+            android:text="1"
+            />
+
+        <Button
+            android:id="@+id/btn2"
+            style="@style/btn1"
+            android:text="2"
+            android:layout_alignTop="@+id/btn1"
+            android:layout_toRightOf="@+id/btn1"/>
+
+        <Button
+            android:id="@+id/btn3"
+            style="@style/btn1"
+            android:text="3"
+            android:layout_alignTop="@+id/btn2"
+            android:layout_toRightOf="@+id/btn2"/>
+
+        <Button
+            android:id="@+id/btnJian"
+            style="@style/btn1"
+            android:text="-"
+            android:layout_alignTop="@+id/btn3"
+            android:layout_toRightOf="@+id/btn3"/>
+
+        <Button
+            android:layout_width="76dp"
+            android:layout_height="100dp"
+            android:text="="
+            android:layout_alignTop="@+id/btnJian"
+            android:layout_toRightOf="@+id/btnJian"/>
+
+        <Button
+            android:id="@+id/btn0"
+            android:layout_width="152dp"
+            android:layout_height="50dp"
+            android:text="0"
+            android:layout_below="@+id/btn1"
+            />
+
+        <Button
+            android:id="@+id/btnDian"
+            style="@style/btn1"
+            android:text="."
+            android:layout_alignTop="@+id/btn0"
+            android:layout_toRightOf="@+id/btn0"/>
+
+        <Button
+            android:id="@+id/btnJia"
+            style="@style/btn1"
+            android:text="="
+            android:layout_alignTop="@+id/btnDian"
+            android:layout_toRightOf="@+id/btnDian"/>
+
+    </RelativeLayout>
+
+</LinearLayout>
