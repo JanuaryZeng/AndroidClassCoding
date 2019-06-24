@@ -43,9 +43,19 @@ public class FruitAdapter extends RecyclerView.Adapter<FruitAdapter.ViewHolder> 
         this.fruits = fruits;
     }
 
+    /**
+     * 这个方法主要生成为每个Item inflater出一个View，但是该方法返回的是一个ViewHolder。
+     * 该方法把View直接封装在ViewHolder中，然后我们面向的是ViewHolder这个实例，
+     * 当然这个ViewHolder需要我们自己去编写。
+     * @param viewGroup
+     * @param i
+     * @return
+     */
+
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
+        //必须这样写
         View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.fruit_layout, viewGroup, false);
 
         final ViewHolder holder = new ViewHolder(view);
@@ -77,13 +87,18 @@ public class FruitAdapter extends RecyclerView.Adapter<FruitAdapter.ViewHolder> 
         return holder;
     }
 
+    /**
+     * 这个方法主要用于适配渲染数据到View中。方法提供给你了一viewHolder而不是原来的convertView。
+     * @param viewHolder
+     * @param i
+     */
     @Override
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
         Fruit fruit = fruits.get(i);
 
-        viewHolder.fruit_image.setImageResource(fruit.getImageId());
+            viewHolder.fruit_image.setImageResource(fruit.getImageId());
 
-        viewHolder.fruit_name.setText(fruit.getName());
+             viewHolder.fruit_name.setText(fruit.getName());
     }
 
     @Override
